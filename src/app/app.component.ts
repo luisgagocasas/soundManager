@@ -1,8 +1,8 @@
 import {Component} from '@angular/core';
 
 @Component({
+  template: require('./app.component.pug')(),
   selector: 'app',
-  templateUrl: './app.component.html',
 })
 export class AppComponent {
 }

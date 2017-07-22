@@ -1,11 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import CustomValidators from '../forms/CustomValidators';
 
 @Component({
-  selector: 'app-contact',
-  templateUrl: './contact.component.html',
-  styleUrls: ['./contact-component.css']
+  template: require('./template.pug')(),
+  styles: [require('./styles.styl').toString()]
 })
 export class ContactComponent implements OnInit {
   contactForm: FormGroup;
@@ -14,7 +12,7 @@ export class ContactComponent implements OnInit {
   ngOnInit() {
     this.contactForm = this.formBuilder.group({
       name: ['', Validators.required],
-      email: ['', [Validators.required, CustomValidators.validateEmail]],
+      email: ['', [Validators.required]],
       content: ['', [Validators.required, Validators.minLength(10)]]
     });
   }

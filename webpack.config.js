@@ -1,7 +1,9 @@
 var webpack = require('webpack');
 var path = require('path');
+var fs = require('fs-extra');
 var webpackMerge = require('webpack-merge');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
+var WebpackOnBuildPlugin = require('on-build-webpack');
 
 // Webpack Config
 var webpackConfig = {
@@ -28,6 +30,10 @@ var webpackConfig = {
       template: 'src/index.html'
     }),
 
+    new WebpackOnBuildPlugin(function(stats) {
+      fs.copySync('src/assets', 'dist/assets')
+    }),
+
   ],
 
   module: {
@@ -42,7 +48,9 @@ var webpackConfig = {
         ]
       },
       { test: /\.css$/, loaders: ['to-string-loader', 'css-loader'] },
-      { test: /\.html$/, loader: 'raw-loader' }
+      { test: /\.html$/, loader: 'raw-loader' },
+      { test: /\.pug$/, loader: 'pug-loader' },
+      { test: /\.styl$/, loader: 'css-loader!stylus-loader?paths=node_modules/bootstrap-stylus/stylus/' }
     ]
   }
 
