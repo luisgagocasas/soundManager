@@ -8,6 +8,7 @@ import { HttpModule } from '@angular/http';
 import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 import { UIRouterModule } from "@uirouter/angular";
 import { componentsList } from './components';
+import { soundmanager2 } from 'soundmanager2';
 
 @NgModule({
   declarations: [AppComponent].concat(componentsList),

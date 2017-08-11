@@ -1,3 +1,4 @@
+
 div
   h3 Angular 4 with UI-Router Seed
 
@@ -9,5 +10,129 @@ div
 
   main
     ui-view
+
+  .container(style='text-align: center')
+    .sm2-bar-ui
+      .bd.sm2-main-controls
+        .sm2-inline-texture
+        .sm2-inline-gradient
+        .sm2-inline-element.sm2-button-element
+          .sm2-button-bd
+            a.sm2-inline-button.play-pause(href='#play') Play / pause
+        .sm2-inline-element.sm2-inline-status
+          .sm2-playlist
+            .sm2-playlist-target
+              // playlist <ul> + <li> markup will be injected here
+              // if you want default / non-JS content, you can put that here.
+              noscript
+                p JavaScript is required.
+          .sm2-progress
+            .sm2-row
+              .sm2-inline-time 0:00
+              .sm2-progress-bd
+                .sm2-progress-track
+                  .sm2-progress-bar
+                  .sm2-progress-ball
+                    .icon-overlay
+              .sm2-inline-duration 0:00
+        .sm2-inline-element.sm2-button-element.sm2-volume
+          .sm2-button-bd
+            span.sm2-inline-button.sm2-volume-control.volume-shade
+            a.sm2-inline-button.sm2-volume-control(href='#volume') volume
+        .sm2-inline-element.sm2-button-element
+          .sm2-button-bd
+            a.sm2-inline-button.previous(href='#prev', title='Previous') < previous
+        .sm2-inline-element.sm2-button-element
+          .sm2-button-bd
+            a.sm2-inline-button.next(href='#next', title='Next') > next
+      .sm2-playlist-drawer
+        .sm2-playlist-wrapper
+          .sm2-playlist-bd
+            table.table.table-striped
+              thead
+                tr
+                  th #
+                  th Title
+                  th Author
+                  th Album
+              tbody
+                tr
+                  td 1
+                  td
+                    a.sm2-icon.sm2-music.sm2-exclude(href='?dir=./library/oasis/.') .
+                  td Directory
+                  td Directory
+                tr
+                  td 2
+                  td
+                    a.sm2-icon.sm2-music.sm2-exclude(href='?dir=./library/oasis/..') ..
+                  td Directory
+                  td Directory
+                tr
+                  td 3
+                  td
+                    a(href='./library/oasis/oasis - all around the world.mp3') All Around the World
+                  td Oasis
+                  td Be Here Now
+                tr
+                  td 4
+                  td
+                    a(href='./library/oasis/oasis - champagne supernova.mp3') Champagne Supernova
+                  td Oasis
+                  td (What's the Story) Morning Glory?
+                tr
+                  td 5
+                  td
+                    a(href="./library/oasis/oasis - don't go away.mp3") Don't Go Away
+                  td Oasis
+                  td Be Here Now
+                tr
+                  td 6
+                  td
+                    a(href="./library/oasis/oasis - don't look back in anger.mp3") Don't Look Back in Anger
+                  td Oasis
+                  td (What's the Story) Morning Glory?
+                tr
+                  td 7
+                  td
+                    a(href='./library/oasis/oasis - little by little.mp3') Little by Little
+                  td Oasis
+                  td Heathen Chemistry
+                tr
+                  td 8
+                  td
+                    a(href='./library/oasis/oasis - live forever.mp3') Live Forever
+                  td Oasis
+                  td Live Forever [EP]
+                tr
+                  td 9
+                  td
+                    a(href='./library/oasis/oasis - lyla.mp3') Lyla
+                  td Oasis
+                  td Don't Believe the Truth
+                tr
+                  td 10
+                  td
+                    a(href='./library/oasis/oasis - stand by me.mp3') Stand by Me
+                  td Oasis
+                  td Be Here Now
+                tr
+                  td 11
+                  td
+                    a(href='./library/oasis/oasis - stop crying your heart out.mp3') Stop Crying Your Heart Out
+                  td Oasis
+                  td Stop Crying Your Heart Out
+                tr
+                  td 12
+                  td
+                    a(href='./library/oasis/oasis - supersonic.mp3') Supersonic
+                  td Oasis
+                  td Definitely Maybe
+                tr
+                  td 13
+                  td
+                    a(href='./library/oasis/oasis - wonderwall.mp3') Wonderwall
+                  td Oasis
+                  td Stop the Clocks Disc 1
 
   footer © 2017
